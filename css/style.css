@@ -1,0 +1,90 @@
+*{ box-sizing: border-box; }
+
+:root{
+    --bg-body: lightgray;
+    --letter-color: white;
+    --bg-progress-color: lightgray;
+    --progress-color: green;
+    --bg-buttons: transparent;
+    --buttons-color: white;
+    --songs-color: lightgray;
+    --active-song-color: white;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Player */
+.player{
+    min-width: 320px;
+    background-image: linear-gradient(black, gray);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: var(--letter-color);
+    box-shadow: 2px 2px 3px black;
+}
+
+/* title */
+.title{
+    margin-top: 0;
+    text-align: center;
+}
+/* Cover */
+.cover{
+    width: 128px;
+    height: auto;
+    border-radius: .3rem;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+/* Progress */
+.progress-container{
+    height: .6rem;
+    background-color: var(--bg-progress-color);
+    margin-bottom: 1rem;
+}
+.progress{
+    width: 0;
+    height: 100%;
+    background-color: var(--progress-color);
+}
+/* Controls */
+.controls{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+.controls button{
+    background-color: var(--bg-buttons);
+    border: none;
+}
+.controls i{
+    font-size: 1.7rem;
+    color: var(--buttons-color);
+    cursor: pointer;
+}
+/* Songs */
+.songs{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+.songs li{
+    margin-bottom: 1rem;
+}
+.songs a{
+   text-decoration: none;
+   color: var(--songs-color);
+}
+.songs a.active{
+    color: var(--active-song-color);
+    font-weight: bold;
+}
